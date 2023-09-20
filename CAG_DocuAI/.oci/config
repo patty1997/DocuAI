@@ -1,0 +1,6 @@
+[DEFAULT]
+user=ocid1.user.oc1..aaaaaaaa5j335qcxefinxkarna5ulkyjwzrfrtt6mibs5eweegqawamkphxa
+fingerprint=d7:46:da:9d:8a:cc:72:b9:98:e5:35:c4:26:42:08:eb
+tenancy=ocid1.tenancy.oc1..aaaaaaaayn6s77e3y4hgz56uzwvay3jrpekafo6ycr5pr5xdsg3gahcygx7a
+region=us-phoenix-1
+key_file=/Users/prateeth/Desktop/untitled_folder/MYDOCS/oci-keys/oracleidentitycloudservice_prateek.t.thakur-09-07-10-18.pem

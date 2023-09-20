@@ -5,7 +5,8 @@ import base64
 from flask_cors import CORS
 from dotenv import load_dotenv
 import json
-from CAG_DocuAI import CAG_Process_Exp_Notes, CAG_Process_Receipts
+import CAG_Process_Receipts
+import CAG_Process_Exp_Notes
 
 load_dotenv('.env')
 

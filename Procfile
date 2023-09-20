@@ -1,0 +1,1 @@
+web: gunicorn oci-classifyv1:app

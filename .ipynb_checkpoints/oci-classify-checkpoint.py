@@ -5,12 +5,12 @@ import base64
 from flask_cors import CORS
 from dotenv import load_dotenv
 import json
-from CAG_DocuAI import CAG_Process_Exp_Notes, CAG_Process_Receipts
+import CAG_Process_Receipts
+import CAG_Process_Exp_Notes
 
 import pdf2image
 import pandas as pd
 import tempfile
-from PIL import Image
 
 load_dotenv('.env')
 

@@ -13,11 +13,18 @@ import re
 
 load_dotenv('.env')
 
+from celery import Celery
+
+
+
+
 app = Flask(__name__)
 CORS(app)
 
+
 config = oci.config.from_file(os.getenv('CONFIG_PATH'), os.getenv('OCI_PROFILE'))
 ai_vision_client = oci.ai_vision.AIServiceVisionClient(config, region="ap-mumbai-1")
+
 
 
 def allowed_file(filename):
@@ -59,7 +66,7 @@ def process_image(image_data, year):
     return CAG_Process_Exp_Notes.process_image_and_generate_dataframe(image_data, year)
 
 
-@app.route('/test', methods=['GE::q!T'])
+@app.route('/test', methods=['GET'])
 def test():
     return "Hello"
 
@@ -180,4 +187,4 @@ def analyze_pdf_test():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, ssl_context=('/CAG_DocuAI/cert.pem', '/CAG_DocuAI/key.pem'))
+    app.run(host='0.0.0.0', port=5000)
